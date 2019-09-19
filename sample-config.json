@@ -1,0 +1,21 @@
+{
+    "GAUSSIAN": {
+        "COMMAND": "g09",
+        "TITLE": "DO_NOT_EDIT",
+        "STARTGJF": "DO_NOT_EDIT",
+        "CPUS": 32,
+        "MEM": "32gb",
+        "COMMENTS": {
+            "SP": "# p sp b3lyp/6-31g(d)",
+            "OPT": "# opt freq b3lyp/6-31g(d)",
+            "FINE_OPT": "# opt(maxstep=5, notrust) freq b3lyp/6-31g(d)"
+        },
+        "CHARGE_AND_MULTIPLICITY": {
+            "NEURAL": "0 1",
+            "CHARGED": "1 2"
+        }
+    },
+    "POLICY": {
+        "FAILED_FINE_OPT_RETRY": 3
+    }
+}
