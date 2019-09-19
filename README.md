@@ -9,7 +9,7 @@
 
 ## Setup
 ```
-python -m pip install -r requirement.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+python -m pip install -r requirement.txt --user -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 ***(If you are not in china, delete -i and following url)***
 
