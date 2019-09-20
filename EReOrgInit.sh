@@ -38,7 +38,7 @@ python -c "import json, sys; d = json.load(open(sys.argv[1]));\
 set +xe
 echo -e "\n\n================= SUCCESS ================= \n"
 echo "INIT DONE! please do following command:"; echo ""
-echo "    # if you want to edit config, run 'nano $filename.EOrg/config.json'"; echo ""
+echo "    # if you want to edit config, run nano '$filename.EOrg/config.json'"; echo ""
 echo "    cd '$filename.EOrg/'"
 echo "    bash '$pd/EReOrgRun.sh'"; echo ""; echo ""
 echo "    # After run EReOrgRun.sh, please run following Command to get result"; echo ""
