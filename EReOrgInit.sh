@@ -2,11 +2,14 @@ set -x
 python -c "import cclib, jsonschema, sys; assert (sys.version_info.major == 2 and sys.version_info.minor==7); print '\\n\\n    >>>> Python Check Passed! <<<<\\n\\n'"
 if [[ $? != 0 ]]; then
     set +xe
-    echo -e "\n\n================= ERROR ================= \n"
+    _lib_chk=`echo -e 'import sys; try:\n\t__import__(sys.argv[1])\nexcept ImportError:\n\t'`
+    echo -e "\n\n======================= ERROR ======================= \n"
     echo -e "  PLEASE check if: "
-    echo    "     \`python\` is python 2.7.x, NOW is ` ( command -v python3 &>/dev/null || echo '[Python NOT FOUND]' ) && ( python -V 2>&1 )`"
-    echo    "      cclib & jsonschema had been installed"
-    echo -e "\n=========================================\n\n"
+    echo    "   - \`python\` is python 2.7.x, you are using ` ( command -v python &>/dev/null 2>&1 && ( python -V 2>&1 )) || echo '[Python NOT FOUND]' `"
+    echo    "   -  cclib & jsonschema had been installed"
+    echo    "      -  cclib      : `( command -v python &>/dev/null 2>&1 && ( python -c "import sys;__import__(sys.argv[1])" cclib       2>&1 &>/dev/null && echo "[INSTALLED]" || echo "[NOT FOUND]" )) || echo '[Python NOT FOUND]' `"
+    echo    "      -  jsonschema : `( command -v python &>/dev/null 2>&1 && ( python -c "import sys;__import__(sys.argv[1])" jsonschema  2>&1 &>/dev/null && echo "[INSTALLED]" || echo "[NOT FOUND]" )) || echo '[Python NOT FOUND]' `"
+    echo -e "\n=====================================================\n\n"
     exit 1
 fi
 set -xe

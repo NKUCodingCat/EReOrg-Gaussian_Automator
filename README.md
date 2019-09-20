@@ -9,15 +9,19 @@
 
 ## Setup
 ```
-python -m pip install -r requirement.txt --user -i https://pypi.tuna.tsinghua.edu.cn/simple
+python -m pip install -r requirement.txt --user -i https://pypi.tuna.tsinghua.edu.cn/simple --trust-host pypi.tuna.tsinghua.edu.cn
 ```
-***(If you are not in china, delete -i and following url)***
+***(If you are not in china, delete -i and following things)***
 
 IF your python *DO NOT* have `pip`, just run:
 ```
 curl https://bootstrap.pypa.io/get-pip.py | python - --user -i https://pypi.tuna.tsinghua.edu.cn/simple --trust-host pypi.tuna.tsinghua.edu.cn
 ```
+before you run `python -m pip install ...`
+
 ***(If you are not in china, delete -i and following things)***
+
+We are planning to upgrade python from 2.x to 3.x, but `get-pip.py` might be buggy when using 3.6 or somewhat upper ([pypa/get-pip#43](https://github.com/pypa/get-pip/issues/43), [pypa/get-pip#44](https://github.com/pypa/get-pip/issues/44))
 
 ## Usage
 
