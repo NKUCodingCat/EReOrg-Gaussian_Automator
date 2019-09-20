@@ -15,7 +15,7 @@ python -m pip install -r requirement.txt --user -i https://pypi.tuna.tsinghua.ed
 
 IF your python *DO NOT* have `pip`, just run:
 ```
-curl https://bootstrap.pypa.io/get-pip.py | python - --user -i https://pypi.tuna.tsinghua.edu.cn/simple --trust-host pypi.tuna.tsinghua.edu.cn
+curl https://bootstrap.pypa.io/get-pip.py | python - --user -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 before you run `python -m pip install ...`
 
