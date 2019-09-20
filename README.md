@@ -9,7 +9,7 @@
 
 ## Setup
 ```
-python -m pip install -r requirement.txt --user -i https://pypi.tuna.tsinghua.edu.cn/simple --trust-host pypi.tuna.tsinghua.edu.cn
+python -m pip install -r requirement.txt --user -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 ***(If you are not in china, delete -i and following things)***
 
