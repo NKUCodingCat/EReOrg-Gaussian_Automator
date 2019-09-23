@@ -81,3 +81,6 @@ E^(N)_C E(SCF) of '<xxx>-chr.neu.sp.log'                    -3738.77269343 eV
 ```
 
 HOORAY!
+
+## update default setting
+Just change `sample-config.json`. Since there is a checker embeded in `EReOrgInit.sh`, any modification w/ error would be raised. 
